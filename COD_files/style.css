@@ -1,0 +1,557 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* {font-weight:400;line-height:150%}.input__input,.input__label{font-size:16px;color:#acacac}.input__input{width:100%;padding:6px 10px 6px 20px;height:56px;border:1px solid #2c2c2c;background:hsla(0,0%,9%,.3);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);margin-top:12px}.input__input ::placeholder{color:#505050}.input__input.--error{border:.5px solid #f87171}.input__input:focus-visible{border:1px solid #e3e3e3;outline:none}.input__error{margin-top:5px;font-size:12px;color:#f87171}.header{display:flex; */
+
+:root{
+    --bg-color: #151111;
+    --second-bg-color: #fff;
+    --txt-color: #acacac;
+    --txt-color-2:#d5d5d5;
+    --header-text-color: #fff;
+    --btn-bg-color:#86303e;
+    --btn-br-color:#ff4d6a;
+    --btn-color:#dfb791;
+    --colorer:#00acee;
+    --colorer-2: #7289da;
+
+}
+
+
+#preloader{
+    background: var(--header-text-color) url(https://media.giphy.com/media/kUTME7ABmhYg5J3psM/giphy.gif) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    background-size: 20%;
+    position: fixed;
+    z-index: 100;
+}
+
+#color{
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.green {
+    color: rgb(67, 239, 67);
+}
+.red {
+  color: red;
+}
+
+.pay{
+    color: var(--btn-color);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    /* background: var(--txt-color-2); */
+    color: var(--header-text-color);
+    height: 200vh;
+}
+
+.header{
+    width: 100%;
+    padding: 2rem 9%;
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    width: 200px;
+}
+
+.logo a{
+    cursor: default;
+}
+
+.navbar{
+    display: flex;
+    margin-left: 75rem;
+    /* opacity: 0.2; */
+}
+
+.navbar div{
+    border-radius: 5px;
+    margin-left: 1rem;
+    padding: 9px 10px;
+    background: var(--btn-bg-color);
+    opacity: 0.7;
+}
+
+.navbar div a{
+    font-size: 3rem;
+    color: var(--btn-br-color);
+    transition: .4s ease;
+    cursor: default;
+    opacity: 1;
+}
+
+.navbar a i:hover{
+    color: var(--btn-color);
+    cursor: pointer;
+    opacity: 1;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--btn-br-color);
+    display: none;
+}
+
+.head-container{
+    min-height: 95.3vh;
+    padding: 1rem 1% 1rem;
+    background: black;
+    text-align: center;
+}
+
+.head-container h1{
+    font-size: 9.7rem;
+}
+
+.head-container h2{
+    font-size: 9rem;
+    width: 100%;
+}
+
+.head-container p{
+    line-height: 1.4em;
+    margin: auto;
+    margin-top: 20px;
+    width: 54%;
+    color: var(--txt-color);
+    font-size: 2rem;
+}
+
+#btn{
+    background: var(--btn-bg-color);
+    padding: 1.9rem 2rem;
+    width: 17%;
+    margin: auto;
+    margin-top: 37px;
+    border: 1px solid var(--btn-br-color);
+    cursor: pointer;
+}
+
+#btn a{
+    color: var(--btn-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Add this CSS to your existing styles */
+#arrow {
+    font-size: 18px;
+    rotate: 135deg;
+    transition: transform 0.3s ease;
+}
+
+#btn:hover #arrow {
+    transform: rotate(45deg);
+}
+
+.end{
+    /* min-height: 23vh;
+    background:var(--second-bg-color) ; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.end img{
+    width: 45%;
+    /* height: ; */
+    z-index: 1;
+    position: absolute; /* Add this to center the #sign-up element */
+    top: 107.9%;
+    left: 27.5%;
+    border: 3px solid linear-gradient(var(--colorer), var(--colorer-2));
+    /* transform: translate(-60%, -540.9%); */
+}
+
+.none{
+    display: none;
+}
+
+#main{
+    color: var(--txt-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* animation: background 8s infinite; */
+}
+
+/* @keyframes background{
+    0%{background: #fff;}
+    25%{background:#fff;}
+    40%{background: linear-gradient(to left,#000, #fff);}
+    60%{background: linear-gradient(to right,#000, #fff);}
+    75%{background :#000};
+    100%{background: #000;}
+
+} */
+
+.container{
+    background: var(--bg-color);
+    width: 50vw;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid;
+    padding: 1.5rem 2rem;
+    animation: lines .8s infinite;
+
+}
+
+@keyframes lines{
+    0% {
+        border-color:var(--colorer-2);
+    }
+    30%{
+        border-color:var(--btn-bg-color);
+    }
+    60%{
+        border-color:var(--bg-color);
+    }
+    90%{
+        border-color:rgb(67, 239, 67);
+    }
+    100%{
+        border-color: var(--colorer);
+    }
+}
+
+.container h2{
+    color: var(--header-text-color);
+    font-size: 4rem;
+}
+
+.container p{
+    font-size: 2rem;
+}
+
+.container p b{
+    color: var(--header-text-color);
+}
+.sections-1{
+    margin-top: 20vw;
+}
+
+.sections{
+    width: 50vw;
+}
+
+.join{
+    margin-bottom: 2rem;
+}
+
+.sign-up{
+    position: fixed; /* Change to "fixed" to keep it centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--bg-color); Remove background color */
+    backdrop-filter: blur(10px); /* Add backdrop blur effect */
+    display: none;
+}
+
+#sign-up{
+    overflow-y:scroll;
+    overflow-x: hidden;
+    background: #000;
+    width: 50%;
+    border: 1px solid var(--txt-color);
+    border-radius: 5px;
+    padding: 2rem;
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* height: 42rem; */
+}
+
+#sign-up #close-btn{
+    color: var(--txt-color);
+    font-size: 2em;
+    float: right;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--txt-color-2);
+    border-radius: 50%;
+}
+
+#sign-up #close-btn:hover{
+    cursor: pointer;
+    background-color: var(--txt-color-2);
+    border: 1px solid var(--txt-color);
+}
+
+#sign-up h1{
+    color: var(--header-text-color);
+    font-size: 5rem;
+}
+
+#sign-up p{
+    color: var(--txt-color);
+    font-size: 2rem;
+}
+
+form{
+    color: var(--txt-color);
+    max-width: 70rem;
+    margin: 3rem auto;
+    margin-bottom: 3rem;
+    display: flex;
+    column-gap: 8rem;
+    flex-wrap: wrap;
+}
+
+.inputs label{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.sign-up form .inputs input{
+    color: var(--txt-color);
+    width: 116%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: transparent;
+    border: 0.1px solid var(--txt-color-2);
+    margin: .7rem 0;
+    height: 10vh;
+}
+
+.sign-up form .inputs #email{
+    width: 250%;
+}
+
+
+#sign-btn{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+
+#sign-btn a{
+    text-align: center;
+    background: var(--btn-bg-color);
+    padding: 17px 10px;
+    width: 100%;
+    color: var(--btn-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+     border: 1px solid var(--btn-br-color);
+}
+
+/* Add this CSS to your existing styles */
+#arrow {
+    font-size: 18px;
+    rotate: 135deg;
+    transition: transform 0.3s ease;
+}
+
+#sign-btn:hover #arrow {
+    transform: rotate(45deg);
+}
+
+/* #sign_up-loader {
+    background: #000 url(preloder.gif) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    background-size: 2%;
+    position: fixed;
+    z-index: 200;
+    display: none;
+} */
+
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 29%;
+        z-index: 1;
+        background: transparent;
+    }
+    .navbar{
+       display: none;
+    }
+
+    .head{
+        margin-top: 40px;
+        min-height: 50vh;
+        padding: 10rem 9% 2rem;
+        background: black;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head h1{
+        font-size: 4rem;
+    }
+
+    .head h2{
+        font-size: 3.5rem;
+        width: 100%;
+    }
+
+    .head p{
+        width: 100%;
+        line-height: 1.9em;
+        margin-top: 20px;
+        color: var(--txt-color);
+        font-size: 1.5rem;
+    }
+
+    #btn{
+        padding: 1.9rem 2rem;
+        width: 40%;
+    }
+    .end img{
+        left: 0;
+        top: 85.3vw;
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .end{
+        min-height: 30vh;
+    }
+
+    #main{
+        gap: 5px;
+    }
+
+    .container{
+        width: 100vw;
+    }
+
+    .none{
+        font-size: 2em;
+        display: unset;
+    }
+
+    #ending{
+        text-align: center;
+        line-height: 4rem;
+    }
+
+    .none #ending .ending{
+        color: var(--txt-color);
+    }
+
+    .ending .navbar-ending{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        gap: 2rem;
+    }
+
+    .ending .navbar-ending a{
+        text-align: center;
+        font-size: 3rem;
+        transition: .4s ease;
+        cursor: default;
+        backdrop-filter: blur(50px);
+        background: var(--btn-bg-color);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        justify-content: center;
+    }
+
+    .ending .navbar-ending a i{
+        color: var(--btn-br-color);
+    }
+
+    .ending .navbar-ending a i:hover{
+        color: var(--btn-color);
+        cursor: pointer;
+    }
+
+    #sign-up{
+        overflow-y:scroll;
+        background: #000;
+        width: 90%;
+        height: 80vh;
+        top: 50%;
+        left: 49%; 
+        /* height: 42rem; */
+    }
+
+    #sign-btn{
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4em;
+    }
+
+    #sign-btn a{
+        text-align: center;
+        background: var(--btn-bg-color);
+        padding: 17px 10px;
+        width: 100%;
+        color: var(--btn-color);
+        font-size: 1.6rem;
+        font-weight: bold;
+        border: 1px solid var(--btn-br-color);
+    }
+
+    form{
+        color: var(--txt-color);
+        float: left;
+        max-width: 20%;
+        margin: 3rem auto;
+        margin-bottom: 3rem;
+        display: grid;
+        row-gap: 2rem;
+    }
+
+    #sign-up h1{
+        color: var(--header-text-color);
+        font-size: 4rem;
+    }
+
+    #sign-up p{
+        color: var(--txt-color);
+        font-size: 1.6rem;
+    }
+
+    .sign-up form .inputs input{
+        width: 100%;
+    }
+
+    .sign-up form .inputs #email{
+        width: 100%;
+    }
+
+    .head-black{
+        background: #000;
+    }
+
+}
